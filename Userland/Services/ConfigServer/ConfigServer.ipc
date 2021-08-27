@@ -4,13 +4,8 @@ endpoint ConfigServer
 
     monitor_domain(String domain) =|
     
-    get_valid_formats() => (Vector<String> valid_formats)
-    
-    create_format(String format) => (Optional<i32> format_id)
-    
-    read_string_value_with_format(i32 format_id, String domain, String group, String key) => (Optional<String> value)
-    read_i32_value_with_format(i32 format_id, String domain, String group, String key) => (Optional<i32> value)
-    read_bool_value_with_format(i32 format_id, String domain, String group, String key) => (Optional<bool> value)
+    get_valid_config_file_formats() => (Vector<String> valid_formats)
+    set_config_file_format(String format) =|
 
     read_string_value(String domain, String group, String key) => (Optional<String> value)
     read_i32_value(String domain, String group, String key) => (Optional<i32> value)
