@@ -3,6 +3,14 @@ endpoint ConfigServer
     pledge_domains(Vector<String> domains) =|
 
     monitor_domain(String domain) =|
+    
+    set_format(i32 format_id) => <Optional<bool> success
+    
+    get_valid_formats() => (i32 format_id)
+    
+    get_next_format_id(i32 format_id) => (i32 format_id)
+    
+    get_format_type_from_id(format_id) => (String format_type)
 
     read_string_value(String domain, String group, String key) => (Optional<String> value)
     read_i32_value(String domain, String group, String key) => (Optional<i32> value)
